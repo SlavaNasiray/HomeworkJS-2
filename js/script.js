@@ -40,13 +40,12 @@ inputData.addEventListener('keypress', function(keyPressed){
         else if (check !== ""){
             var newLi = document.createElement('li');
             var newSpan = document.createElement('span');
-            
             newSpan.innerHTML = 'Удалить';
 
             var newInfo = this.value;
             this.value = " ";
 
-            olSpisok.appendChild(newLi).append(newSpan, newInfo,"Дата и время добавления:",new Date());
+            olSpisok.appendChild(newLi).append(newSpan, newInfo, "----//Дата и время добавления:", new Date());
             }
         };
     deleteTodo();
@@ -60,7 +59,7 @@ saveBtn.addEventListener('click', function(){
 });
 
 clearBtn.addEventListener('click', function(){
-    ulSpisok.innerHTML = " ";
+    olSpisok.innerHTML = " ";
     localStorage.setItem('ApplicationTodo', olSpisok.innerHTML);
 });
 
